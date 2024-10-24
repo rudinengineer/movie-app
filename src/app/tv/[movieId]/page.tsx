@@ -1,4 +1,4 @@
-"use server"
+"use client"
 import React from 'react'
 import TvDetail from '~/components/ui/tv-detail'
 import { POSTER_BASEURL } from '~/constants/tmdb'
