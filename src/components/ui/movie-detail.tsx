@@ -7,7 +7,7 @@ import Link from 'next/link'
 import { sendRequestTMDB } from '~/lib/tmdb'
 
 type Props = {
-    movieId: string
+    movieId: any
 }
 
 export default function MovieDetail({movieId}: Props) {

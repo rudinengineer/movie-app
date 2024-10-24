@@ -7,7 +7,7 @@ import { StarIcon } from '@heroicons/react/16/solid'
 import Link from 'next/link'
 
 type Props = {
-    movieId: string
+    movieId: any
 }
 
 export default function TvDetail({movieId}: Props) {

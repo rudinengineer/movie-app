@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router'
 import React from 'react'
 import MovieDetail from '~/components/ui/movie-detail'
 // import { POSTER_BASEURL } from '~/constants/tmdb'
@@ -5,9 +6,9 @@ import MovieDetail from '~/components/ui/movie-detail'
 // import { MovieType } from '~/types/movie'
 
 type Props = {
-    params: {
-        movieId: any
-    }
+    // params: {
+    //     movieId: any
+    // }
 }
 
 // export async function generateMetadata({params}: Props) {
@@ -24,11 +25,12 @@ type Props = {
 //     }
 // }
 
-export default function Page({params}: Props) {
+export default function Page({}: Props) {
+  const router = useRouter()
 
   return (
-    params?.movieId && (
-        <MovieDetail movieId={params.movieId} />
+    router.query?.movieId && (
+        <MovieDetail movieId={router.query.movieId} />
     )
   )
 }
