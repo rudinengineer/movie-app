@@ -27,10 +27,8 @@ export async function generateMetadata({params}: Props) {
     }
 }
 
-export default function Page({params}: Props) {
+export default async function Page({params}: Props) {
   return (
-    params?.movieId && (
-        <MovieDetail movieId={params.movieId} />
-    )
+    <MovieDetail movieId={await params.movieId} />
   )
 }
