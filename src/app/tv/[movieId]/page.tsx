@@ -1,3 +1,4 @@
+"use server"
 import { useRouter } from 'next/router'
 import React from 'react'
 import TvDetail from '~/components/ui/tv-detail'
