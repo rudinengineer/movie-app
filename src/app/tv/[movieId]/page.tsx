@@ -7,7 +7,7 @@ import { MovieType } from '~/types/movie'
 
 type Props = {
     params: {
-        movieId: any
+        movieId: Promise<any>
     }
 }
 
