@@ -12,7 +12,7 @@ type Props = {
 }
 
 export async function generateMetadata({params}: Props) {
-    const response = await sendRequestTMDB(`/tv/${params.movieId}`)
+    const response = await sendRequestTMDB(`/tv/${await params.movieId}`)
     const data: MovieType = await response?.data
 
     return {
