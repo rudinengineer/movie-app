@@ -24,7 +24,7 @@ export async function generateMetadata({params}: Props) {
     }
 }
 
-export default function page({params}: Props) {
+export default function Page({params}: Props) {
 
   return (
     params?.movieId && (
