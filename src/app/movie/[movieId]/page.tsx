@@ -6,7 +6,7 @@ import { MovieType } from '~/types/movie'
 
 type Props = {
     params: {
-        movieId: string
+        movieId: any
     }
 }
 
@@ -17,10 +17,10 @@ export async function generateMetadata({params}: Props) {
     return {
         title: data.title ?? data.original_title,
         description: data.overview,
-        // openGraph: {
-        //     title: data.title ?? data.title,
-        //     images: POSTER_BASEURL + data.poster_path
-        // }
+        openGraph: {
+            title: data.title ?? data.title,
+            images: POSTER_BASEURL + data.poster_path
+        }
     }
 }
 
